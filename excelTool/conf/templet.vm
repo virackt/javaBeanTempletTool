@@ -1,0 +1,16 @@
+public class $templet.className{
+	#foreach ($field in $templet.fieldList)
+		// $field.comment
+		private $field.javaType $field.paramName;
+	#end
+	
+	#foreach ($field in $templet.fieldList)
+		public $field.javaType $field.getMethodName{
+			return $field.paramName;
+		};
+		
+		public void $field.setMethodName{
+			this.$field.paramName = $field.paramName;
+		};
+	#end
+}
